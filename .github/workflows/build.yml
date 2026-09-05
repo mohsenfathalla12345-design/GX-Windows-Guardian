@@ -18,10 +18,10 @@ jobs:
 
     - name: Compile Executable
       run: |
-        cl.exe /EHsc /W3 /std:c++17 /O2 main.cpp /fe:GX_Windows_Guardian.exe gdiplus.lib comctl32.lib user32.lib gdi32.lib shell32.lib advapi32.lib /link /SUBSYSTEM:WINDOWS
+        cl.exe /EHsc /W3 /std:c++17 /O2 main.cpp /Fe:GX_Windows_Guardian.exe gdiplus.lib comctl32.lib user32.lib gdi32.lib shell32.lib advapi32.lib /link /SUBSYSTEM:WINDOWS
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: GX_Windows_Guardian_Executable
-        path: GX_Windows_Guardian.exe
+        path: "*.exe"

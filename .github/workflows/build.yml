@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1.1
+    - name: Set up MSVC environment
+      uses: ilammy/msvc-dev-cmd@v1
 
     - name: Compile Executable
       run: |
